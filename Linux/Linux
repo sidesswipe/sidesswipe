@@ -1,1 +1,18 @@
 
+docker ps
+curl -O https://URL/playbook-name.yml
+nano /etc/ansible/hosts
+Add the internal IP address under the `[webservers]` header.
+	- Add the python line: `ansible_python_interpreter=/usr/bin/python3` besides each IP.
+  
+    - Open the file with `nano /etc/ansible/ansible.cfg` and scroll down to the `remote_user` option.
+    
+    - Uncomment the `remote_user` line and replace `root` with your admin username using this format:
+				- `remote_user = <user-name-for-web-VMs>`
+        
+        
+     ansible-playbook PATH TO YML FILE/FILENAME.YML 
+     
+     
+     
+        
